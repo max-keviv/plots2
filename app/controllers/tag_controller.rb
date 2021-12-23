@@ -130,7 +130,6 @@ class TagController < ApplicationController
                else # params[:order] == 'last_updated'
                  'node_revisions.timestamp DESC'
                end
-
     @pagy, nodes = pagy(nodes.order(order_by), items: 24)
     @paginated = true
 
